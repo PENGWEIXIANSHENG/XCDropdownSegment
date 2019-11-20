@@ -144,9 +144,12 @@
     {
         XCDropdownSegmentBar *segmentBar = [[XCDropdownSegmentBar alloc] initWithFrame:CGRectZero];
         segmentBar.backgroundColor = [UIColor whiteColor];
-        segmentBar.layer.shadowOpacity = .2f;
-        segmentBar.layer.shadowOffset = CGSizeMake(3, 3);
-        segmentBar.layer.shadowRadius = 3;
+//        segmentBar.layer.shadowOpacity = .2f;
+//        segmentBar.layer.shadowOffset = CGSizeMake(3, 3);
+//        segmentBar.layer.shadowRadius = 3;
+        //编辑边界颜色和宽度
+        segmentBar.layer.borderWidth = 0.5;
+        segmentBar.layer.borderColor = [UIColor redColor].CGColor;
         
         /// 点击 segmentBar 上的 item 的回调
         __weak typeof(self) weakSelf = self;
