@@ -51,8 +51,9 @@
         confi.rowHeight = 40;
         confi.segmentHeight = 40;
         confi.sectionHeight = 40;
-        confi.arrowUpImage   = ImageNamed(@"hd_btn_xlx_up");
-        confi.arrowDownImage = ImageNamed(@"hd_btn_xlx_down");
+        //根据项目需求更改图片
+        confi.arrowUpImage   = ImageNamed(@"icon_arrow_up");
+        confi.arrowDownImage = ImageNamed(@"icon_arrow_down");
         confi.headerTitleColor = [UIColor colorWithHexString:@"#333333"];
         confi.headerSelectedTitleColor = [UIColor colorWithHexString:@"#4180E9"];
     }];
