@@ -8,7 +8,7 @@
 
 #import "XCDropdownSegmentConfigure.h"
 #import "XCDropdownSegmentHeader.h"
-
+#import "UIColor+Hex.h"
 
 @implementation XCDropdownSegmentConfigure
 
@@ -18,13 +18,14 @@
     
     config.sectionHeight = 50;
     config.rowHeight     = 50;
-    config.arrowUpImage   = ImageNamed(@"icon_arrow_up");
-    config.arrowDownImage = ImageNamed(@"icon_arrow_down");
+    config.segmentHeight = 40;
+    config.arrowUpImage   = ImageNamed(@"hd_btn_xlx_up");
+    config.arrowDownImage = ImageNamed(@"hd_btn_xlx_down");
     config.checkImage = ImageNamed(@"icon_check");
     
-    config.headerTitleColor = RGBA_COLOR(88, 88, 88, 1);
-    config.headerSelectedTitleColor = [UIColor orangeColor];
-    config.headerTitleFontSize = 15;
+    config.headerTitleColor = [UIColor colorWithHexString:@"#333333"];
+    config.headerSelectedTitleColor = [UIColor colorWithHexString:@"#4180E9"];
+    config.headerTitleFontSize = 13;
     
     config.rowTitleColor = [UIColor blackColor];
     config.rowSelectedTitleColor = [UIColor orangeColor];

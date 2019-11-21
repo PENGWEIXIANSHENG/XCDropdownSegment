@@ -11,11 +11,8 @@
 #import "UIView+XCDropdownSegment.h"
 #import "XCDropdownSegmentHeader.h"
 #import "XCDropdownSegmentConfigure.h"
+#import "XCDropdownSegmentButton.h"
 
-
-@interface XCDropdownSegmentButton : UIButton
-
-@end
 
 
 /* 🐖 *******************🐖 XCDropdownSegmentBar 🐖 *********************  🐖 */

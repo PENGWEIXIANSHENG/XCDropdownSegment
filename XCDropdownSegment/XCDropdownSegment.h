@@ -17,7 +17,10 @@
 #import <UIKit/UIKit.h>
 
 #import "XCDropdownSegmentBar.h"
-
+#import "XHOneChildView.h"
+#import "XHTwoChildView.h"
+#import "XHThreeChildView.h"
+#import "XHFourChildView.h"
 
 @class XCDropdownSegment;
 
@@ -36,6 +39,7 @@
  */
 - (NSArray<NSString *> *)dropdownSegment:(XCDropdownSegment *)dropdownSegment
                          titlesInSection:(NSInteger)section;
+
 @end
 
 
@@ -62,6 +66,12 @@
 
 @interface XCDropdownSegment : UIView
 
+
+@property (strong, nonatomic) XHOneChildView *oneView;
+@property (strong, nonatomic) XHTwoChildView *twoView;
+@property (strong, nonatomic) XHThreeChildView *threeView;
+@property (strong, nonatomic) XHFourChildView *fourView;
+
 @property (weak, nonatomic) id<XCDropdownSegmentDataSource> dataSource;
 @property (weak, nonatomic) id<XCDropdownSegmentDelegate> delegate;
 
@@ -70,6 +80,12 @@
  *  更新配置
  */
 - (void)updateConfigure:(void(^)(XCDropdownSegmentConfigure *confi))configure;
+
+/**
+*  更新选中标题
+*/
+-(void)updateSelectedItemTitle:(NSString *)title;
+
 
 /**
  *  刷新数据

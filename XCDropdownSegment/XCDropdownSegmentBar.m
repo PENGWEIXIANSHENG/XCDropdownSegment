@@ -7,38 +7,7 @@
 //
 
 #import "XCDropdownSegmentBar.h"
-
-
-@implementation XCDropdownSegmentButton
-
-- (void)layoutSubviews
-{
-    [super layoutSubviews];
-    
-    CGFloat textW = [self.titleLabel.text sizeWithAttributes:@{NSFontAttributeName : self.titleLabel.font}].width;    // 文字宽度
-    CGFloat imgW = TOP_BUTTON_IMG_WIDTH; // 图片宽度
-    CGFloat marginX = TOP_BUTTON_IMG_TITLE_MARGIN;  // 图片与文字的间隙
-    
-    self.titleLabel.left = (self.width - (textW + imgW + marginX)) * 0.5;
-    self.imageView.left  = CGRectGetMaxX(self.titleLabel.frame) + 5;
-}
-
-- (void)setTitle:(NSString *)title forState:(UIControlState)state
-{
-    [super setTitle:title forState:state];
-    [self sizeToFit];
-}
-
-- (void)setImage:(UIImage *)image forState:(UIControlState)state
-{
-    [super setImage:image forState:state];
-    [self sizeToFit];
-}
-
-- (void)setHighlighted:(BOOL)highlighted {}
-
-@end
-
+#import "UIColor+Hex.h"
 
 /* 🐖 *******************🐖 XCDropdownSegmentBar 🐖 *********************  🐖 */
 
@@ -164,16 +133,28 @@
     /// 重新添加 items
     for (NSInteger i = 0; i < count; i ++)
     {
-        XCDropdownSegmentButton *item = [XCDropdownSegmentButton buttonWithType:UIButtonTypeCustom];
+        
+         XCDropdownSegmentButton *item = [[XCDropdownSegmentButton alloc]init];
+         [item setTitle:self.titles[i] forState:UIControlStateNormal];
+         [item setTitleColor:[UIColor colorWithHexString:@"#4180E9"] forState:UIControlStateSelected];
+        [item setTitleColor:[UIColor colorWithHexString:@"#333333"] forState:UIControlStateNormal];
+        [item setImage:[UIImage imageNamed:@"hd_btn_xlx_up"] forState:UIControlStateSelected];
+        [item setImage:[UIImage imageNamed:@"hd_btn_xlx_down"] forState:UIControlStateNormal];
+        item.imageAlignment = ZJImageAlignmentRight;
+        item.spaceBetweenTitleAndImage = 3;
+        
+        
+//        XCDropdownSegmentButton *item = [XCDropdownSegmentButton buttonWithType:UIButtonTypeCustom];
         item.tag = 100 + i;
         [item setTitle:self.titles[i] forState:UIControlStateNormal];
-        // 添加进数组
+        item.titleLabel.font = [UIFont systemFontOfSize:13];
+//        // 添加进数组
         [self.items addObject:item];
-        // 添加事件
+//        // 添加事件
         [item addTarget:self action:@selector(didClickItemAction:) forControlEvents:UIControlEventTouchUpInside];
-        // 更新配置
+//        // 更新配置
         [self updateConfigureWithItem:item];
-        // 添加到视图
+//        // 添加到视图
         [self addSubview:item];
     }
     
@@ -186,7 +167,7 @@
         // 添加进数组
         [self.lines addObject:lineView];
         // 添加到视图
-        [self addSubview:lineView];
+//        [self addSubview:lineView];
     }
 }
 

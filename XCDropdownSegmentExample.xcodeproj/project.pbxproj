@@ -13,16 +13,32 @@
 		1E25AA441FE254BB0047E765 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E25AA431FE254BB0047E765 /* main.m */; };
 		1E25AA4E1FE254BB0047E765 /* XCDropdownSegmentExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E25AA4D1FE254BB0047E765 /* XCDropdownSegmentExampleTests.m */; };
 		1E25AA591FE254BB0047E765 /* XCDropdownSegmentExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E25AA581FE254BB0047E765 /* XCDropdownSegmentExampleUITests.m */; };
-		1E25AA691FE2623C0047E765 /* XCDropdownSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E25AA681FE2623C0047E765 /* XCDropdownSegment.m */; };
 		1E2A498F20621F5E0042E2AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E2A498E20621F5E0042E2AA /* Main.storyboard */; };
-		1EBC9A081FEA071000692C0C /* XCDropdownSegmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EBC9A061FEA071000692C0C /* XCDropdownSegmentCell.m */; };
-		1EBC9A091FEA071000692C0C /* XCDropdownSegmentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EBC9A071FEA071000692C0C /* XCDropdownSegmentCell.xib */; };
-		1EBC9A0C1FEA0AF200692C0C /* XCDropdownSegmentConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EBC9A0A1FEA0AF100692C0C /* XCDropdownSegmentConfigure.m */; };
-		1EBC9A0F1FEA0B3F00692C0C /* XCDropdownSegmentBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EBC9A0E1FEA0B3F00692C0C /* XCDropdownSegmentBar.m */; };
-		1EBC9A121FEA0E5F00692C0C /* UIView+XCDropdownSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EBC9A111FEA0E5F00692C0C /* UIView+XCDropdownSegment.m */; };
-		1EBC9A151FEA4E3B00692C0C /* XCDropdownSegment.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1EE677E81FE3D6E30085CD87 /* XCDropdownSegment.bundle */; };
 		1EBC9A1D1FEB675A00692C0C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EBC9A1A1FEB675A00692C0C /* ViewController.m */; };
 		1EBC9A1E1FEB675A00692C0C /* XCTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EBC9A1C1FEB675A00692C0C /* XCTestViewController.m */; };
+		85CB69BE2385288F003384F8 /* UIView+XCDropdownSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CB69B22385288D003384F8 /* UIView+XCDropdownSegment.m */; };
+		85CB69BF2385288F003384F8 /* XCDropdownSegmentConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CB69B92385288E003384F8 /* XCDropdownSegmentConfigure.m */; };
+		85CB69C02385288F003384F8 /* XCDropdownSegment.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 85CB69BA2385288E003384F8 /* XCDropdownSegment.bundle */; };
+		85CB69C12385288F003384F8 /* XCDropdownSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CB69BB2385288E003384F8 /* XCDropdownSegment.m */; };
+		85CB69C22385288F003384F8 /* XCDropdownSegmentBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CB69BC2385288E003384F8 /* XCDropdownSegmentBar.m */; };
+		85CB69C32385288F003384F8 /* XCDropdownSegmentButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CB69BD2385288E003384F8 /* XCDropdownSegmentButton.m */; };
+		85CB69CC238528B3003384F8 /* XHOneChildView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CB69C5238528B2003384F8 /* XHOneChildView.m */; };
+		85CB69CD238528B3003384F8 /* XHFourChildView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CB69C6238528B2003384F8 /* XHFourChildView.m */; };
+		85CB69CE238528B3003384F8 /* XHTwoChildView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CB69C9238528B3003384F8 /* XHTwoChildView.m */; };
+		85CB69CF238528B3003384F8 /* XHThreeChildView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CB69CB238528B3003384F8 /* XHThreeChildView.m */; };
+		85CB69D22385290D003384F8 /* XCDropdownSegmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CB69D12385290D003384F8 /* XCDropdownSegmentCell.m */; };
+		85CB69EC238529BF003384F8 /* MCalendarCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CB69D5238529BF003384F8 /* MCalendarCollectionCell.m */; };
+		85CB69ED238529BF003384F8 /* MImageTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CB69DB238529BF003384F8 /* MImageTitleButton.m */; };
+		85CB69EE238529BF003384F8 /* CalendarConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CB69DD238529BF003384F8 /* CalendarConfig.m */; };
+		85CB69EF238529BF003384F8 /* MCalendarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CB69DE238529BF003384F8 /* MCalendarItem.m */; };
+		85CB69F0238529BF003384F8 /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CB69DF238529BF003384F8 /* Helper.m */; };
+		85CB69F1238529BF003384F8 /* MCalendarTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CB69E1238529BF003384F8 /* MCalendarTitleView.m */; };
+		85CB69F2238529BF003384F8 /* MCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CB69E2238529BF003384F8 /* MCalendarView.m */; };
+		85CB69F3238529BF003384F8 /* NSDate+Calendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CB69E3238529BF003384F8 /* NSDate+Calendar.m */; };
+		85CB69F4238529BF003384F8 /* MCalendarShortView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CB69E5238529BF003384F8 /* MCalendarShortView.m */; };
+		85CB69F5238529BF003384F8 /* Calendar.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 85CB69E6238529BF003384F8 /* Calendar.bundle */; };
+		85CB69F6238529BF003384F8 /* JX_GCDTimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CB69EA238529BF003384F8 /* JX_GCDTimerManager.m */; };
+		85CB69F923853618003384F8 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CB69F823853618003384F8 /* UIColor+Hex.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,24 +72,57 @@
 		1E25AA541FE254BB0047E765 /* XCDropdownSegmentExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XCDropdownSegmentExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E25AA581FE254BB0047E765 /* XCDropdownSegmentExampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCDropdownSegmentExampleUITests.m; sourceTree = "<group>"; };
 		1E25AA5A1FE254BB0047E765 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1E25AA671FE2623C0047E765 /* XCDropdownSegment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCDropdownSegment.h; sourceTree = "<group>"; };
-		1E25AA681FE2623C0047E765 /* XCDropdownSegment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCDropdownSegment.m; sourceTree = "<group>"; };
 		1E2A498E20621F5E0042E2AA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		1EBC9A051FEA071000692C0C /* XCDropdownSegmentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCDropdownSegmentCell.h; sourceTree = "<group>"; };
-		1EBC9A061FEA071000692C0C /* XCDropdownSegmentCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCDropdownSegmentCell.m; sourceTree = "<group>"; };
-		1EBC9A071FEA071000692C0C /* XCDropdownSegmentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XCDropdownSegmentCell.xib; sourceTree = "<group>"; };
-		1EBC9A0A1FEA0AF100692C0C /* XCDropdownSegmentConfigure.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCDropdownSegmentConfigure.m; sourceTree = "<group>"; };
-		1EBC9A0B1FEA0AF200692C0C /* XCDropdownSegmentConfigure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCDropdownSegmentConfigure.h; sourceTree = "<group>"; };
-		1EBC9A0D1FEA0B3F00692C0C /* XCDropdownSegmentBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCDropdownSegmentBar.h; sourceTree = "<group>"; };
-		1EBC9A0E1FEA0B3F00692C0C /* XCDropdownSegmentBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCDropdownSegmentBar.m; sourceTree = "<group>"; };
-		1EBC9A101FEA0E5F00692C0C /* UIView+XCDropdownSegment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+XCDropdownSegment.h"; sourceTree = "<group>"; };
-		1EBC9A111FEA0E5F00692C0C /* UIView+XCDropdownSegment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+XCDropdownSegment.m"; sourceTree = "<group>"; };
-		1EBC9A141FEA0F8C00692C0C /* XCDropdownSegmentHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCDropdownSegmentHeader.h; sourceTree = "<group>"; };
 		1EBC9A191FEB675A00692C0C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		1EBC9A1A1FEB675A00692C0C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1EBC9A1B1FEB675A00692C0C /* XCTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCTestViewController.h; sourceTree = "<group>"; };
 		1EBC9A1C1FEB675A00692C0C /* XCTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCTestViewController.m; sourceTree = "<group>"; };
-		1EE677E81FE3D6E30085CD87 /* XCDropdownSegment.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = XCDropdownSegment.bundle; sourceTree = "<group>"; };
+		85CB69B22385288D003384F8 /* UIView+XCDropdownSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XCDropdownSegment.m"; sourceTree = "<group>"; };
+		85CB69B32385288D003384F8 /* XCDropdownSegmentConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCDropdownSegmentConfigure.h; sourceTree = "<group>"; };
+		85CB69B42385288D003384F8 /* XCDropdownSegmentBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCDropdownSegmentBar.h; sourceTree = "<group>"; };
+		85CB69B52385288D003384F8 /* XCDropdownSegmentHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCDropdownSegmentHeader.h; sourceTree = "<group>"; };
+		85CB69B62385288D003384F8 /* UIView+XCDropdownSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XCDropdownSegment.h"; sourceTree = "<group>"; };
+		85CB69B72385288E003384F8 /* XCDropdownSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCDropdownSegment.h; sourceTree = "<group>"; };
+		85CB69B82385288E003384F8 /* XCDropdownSegmentButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCDropdownSegmentButton.h; sourceTree = "<group>"; };
+		85CB69B92385288E003384F8 /* XCDropdownSegmentConfigure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCDropdownSegmentConfigure.m; sourceTree = "<group>"; };
+		85CB69BA2385288E003384F8 /* XCDropdownSegment.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = XCDropdownSegment.bundle; sourceTree = "<group>"; };
+		85CB69BB2385288E003384F8 /* XCDropdownSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCDropdownSegment.m; sourceTree = "<group>"; };
+		85CB69BC2385288E003384F8 /* XCDropdownSegmentBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCDropdownSegmentBar.m; sourceTree = "<group>"; };
+		85CB69BD2385288E003384F8 /* XCDropdownSegmentButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCDropdownSegmentButton.m; sourceTree = "<group>"; };
+		85CB69C4238528B2003384F8 /* XHFourChildView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFourChildView.h; sourceTree = "<group>"; };
+		85CB69C5238528B2003384F8 /* XHOneChildView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHOneChildView.m; sourceTree = "<group>"; };
+		85CB69C6238528B2003384F8 /* XHFourChildView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHFourChildView.m; sourceTree = "<group>"; };
+		85CB69C7238528B2003384F8 /* XHThreeChildView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHThreeChildView.h; sourceTree = "<group>"; };
+		85CB69C8238528B2003384F8 /* XHTwoChildView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHTwoChildView.h; sourceTree = "<group>"; };
+		85CB69C9238528B3003384F8 /* XHTwoChildView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHTwoChildView.m; sourceTree = "<group>"; };
+		85CB69CA238528B3003384F8 /* XHOneChildView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHOneChildView.h; sourceTree = "<group>"; };
+		85CB69CB238528B3003384F8 /* XHThreeChildView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHThreeChildView.m; sourceTree = "<group>"; };
+		85CB69D02385290D003384F8 /* XCDropdownSegmentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCDropdownSegmentCell.h; sourceTree = "<group>"; };
+		85CB69D12385290D003384F8 /* XCDropdownSegmentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCDropdownSegmentCell.m; sourceTree = "<group>"; };
+		85CB69D5238529BF003384F8 /* MCalendarCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCalendarCollectionCell.m; sourceTree = "<group>"; };
+		85CB69D6238529BF003384F8 /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
+		85CB69D7238529BF003384F8 /* MCalendarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCalendarItem.h; sourceTree = "<group>"; };
+		85CB69D8238529BF003384F8 /* MCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCalendarView.h; sourceTree = "<group>"; };
+		85CB69D9238529BF003384F8 /* MCalendarTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCalendarTitleView.h; sourceTree = "<group>"; };
+		85CB69DA238529BF003384F8 /* MCalendarShortView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCalendarShortView.h; sourceTree = "<group>"; };
+		85CB69DB238529BF003384F8 /* MImageTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MImageTitleButton.m; sourceTree = "<group>"; };
+		85CB69DC238529BF003384F8 /* NSDate+Calendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Calendar.h"; sourceTree = "<group>"; };
+		85CB69DD238529BF003384F8 /* CalendarConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarConfig.m; sourceTree = "<group>"; };
+		85CB69DE238529BF003384F8 /* MCalendarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCalendarItem.m; sourceTree = "<group>"; };
+		85CB69DF238529BF003384F8 /* Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helper.m; sourceTree = "<group>"; };
+		85CB69E0238529BF003384F8 /* MCalendarCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCalendarCollectionCell.h; sourceTree = "<group>"; };
+		85CB69E1238529BF003384F8 /* MCalendarTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCalendarTitleView.m; sourceTree = "<group>"; };
+		85CB69E2238529BF003384F8 /* MCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCalendarView.m; sourceTree = "<group>"; };
+		85CB69E3238529BF003384F8 /* NSDate+Calendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Calendar.m"; sourceTree = "<group>"; };
+		85CB69E4238529BF003384F8 /* MImageTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MImageTitleButton.h; sourceTree = "<group>"; };
+		85CB69E5238529BF003384F8 /* MCalendarShortView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCalendarShortView.m; sourceTree = "<group>"; };
+		85CB69E6238529BF003384F8 /* Calendar.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Calendar.bundle; sourceTree = "<group>"; };
+		85CB69E7238529BF003384F8 /* CalendarConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarConfig.h; sourceTree = "<group>"; };
+		85CB69E9238529BF003384F8 /* JX_GCDTimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JX_GCDTimerManager.h; sourceTree = "<group>"; };
+		85CB69EA238529BF003384F8 /* JX_GCDTimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JX_GCDTimerManager.m; sourceTree = "<group>"; };
+		85CB69EB238529BF003384F8 /* MCalendarFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCalendarFramework.h; sourceTree = "<group>"; };
+		85CB69F723853618003384F8 /* UIColor+Hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		85CB69F823853618003384F8 /* UIColor+Hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +153,7 @@
 		1E25AA281FE254BA0047E765 = {
 			isa = PBXGroup;
 			children = (
+				85CB69D3238529BF003384F8 /* MCalendarFramework */,
 				1E25AA661FE255B60047E765 /* XCDropdownSegment */,
 				1E25AA331FE254BA0047E765 /* XCDropdownSegmentExample */,
 				1E25AA4C1FE254BB0047E765 /* XCDropdownSegmentExampleTests */,
@@ -125,12 +175,24 @@
 		1E25AA331FE254BA0047E765 /* XCDropdownSegmentExample */ = {
 			isa = PBXGroup;
 			children = (
+				85CB69F723853618003384F8 /* UIColor+Hex.h */,
+				85CB69F823853618003384F8 /* UIColor+Hex.m */,
 				1E25AA341FE254BA0047E765 /* AppDelegate.h */,
 				1E25AA351FE254BA0047E765 /* AppDelegate.m */,
 				1EBC9A191FEB675A00692C0C /* ViewController.h */,
 				1EBC9A1A1FEB675A00692C0C /* ViewController.m */,
 				1EBC9A1B1FEB675A00692C0C /* XCTestViewController.h */,
 				1EBC9A1C1FEB675A00692C0C /* XCTestViewController.m */,
+				85CB69C4238528B2003384F8 /* XHFourChildView.h */,
+				85CB69C6238528B2003384F8 /* XHFourChildView.m */,
+				85CB69CA238528B3003384F8 /* XHOneChildView.h */,
+				85CB69C5238528B2003384F8 /* XHOneChildView.m */,
+				85CB69C7238528B2003384F8 /* XHThreeChildView.h */,
+				85CB69CB238528B3003384F8 /* XHThreeChildView.m */,
+				85CB69C8238528B2003384F8 /* XHTwoChildView.h */,
+				85CB69C9238528B3003384F8 /* XHTwoChildView.m */,
+				85CB69D02385290D003384F8 /* XCDropdownSegmentCell.h */,
+				85CB69D12385290D003384F8 /* XCDropdownSegmentCell.m */,
 				1E25AA3D1FE254BB0047E765 /* Assets.xcassets */,
 				1E25AA3F1FE254BB0047E765 /* LaunchScreen.storyboard */,
 				1E2A498E20621F5E0042E2AA /* Main.storyboard */,
@@ -161,21 +223,65 @@
 		1E25AA661FE255B60047E765 /* XCDropdownSegment */ = {
 			isa = PBXGroup;
 			children = (
-				1EE677E81FE3D6E30085CD87 /* XCDropdownSegment.bundle */,
-				1EBC9A0B1FEA0AF200692C0C /* XCDropdownSegmentConfigure.h */,
-				1EBC9A0A1FEA0AF100692C0C /* XCDropdownSegmentConfigure.m */,
-				1E25AA671FE2623C0047E765 /* XCDropdownSegment.h */,
-				1E25AA681FE2623C0047E765 /* XCDropdownSegment.m */,
-				1EBC9A0D1FEA0B3F00692C0C /* XCDropdownSegmentBar.h */,
-				1EBC9A0E1FEA0B3F00692C0C /* XCDropdownSegmentBar.m */,
-				1EBC9A051FEA071000692C0C /* XCDropdownSegmentCell.h */,
-				1EBC9A061FEA071000692C0C /* XCDropdownSegmentCell.m */,
-				1EBC9A071FEA071000692C0C /* XCDropdownSegmentCell.xib */,
-				1EBC9A101FEA0E5F00692C0C /* UIView+XCDropdownSegment.h */,
-				1EBC9A111FEA0E5F00692C0C /* UIView+XCDropdownSegment.m */,
-				1EBC9A141FEA0F8C00692C0C /* XCDropdownSegmentHeader.h */,
+				85CB69BA2385288E003384F8 /* XCDropdownSegment.bundle */,
+				85CB69B62385288D003384F8 /* UIView+XCDropdownSegment.h */,
+				85CB69B22385288D003384F8 /* UIView+XCDropdownSegment.m */,
+				85CB69B72385288E003384F8 /* XCDropdownSegment.h */,
+				85CB69BB2385288E003384F8 /* XCDropdownSegment.m */,
+				85CB69B42385288D003384F8 /* XCDropdownSegmentBar.h */,
+				85CB69BC2385288E003384F8 /* XCDropdownSegmentBar.m */,
+				85CB69B82385288E003384F8 /* XCDropdownSegmentButton.h */,
+				85CB69BD2385288E003384F8 /* XCDropdownSegmentButton.m */,
+				85CB69B32385288D003384F8 /* XCDropdownSegmentConfigure.h */,
+				85CB69B92385288E003384F8 /* XCDropdownSegmentConfigure.m */,
+				85CB69B52385288D003384F8 /* XCDropdownSegmentHeader.h */,
 			);
 			path = XCDropdownSegment;
+			sourceTree = "<group>";
+		};
+		85CB69D3238529BF003384F8 /* MCalendarFramework */ = {
+			isa = PBXGroup;
+			children = (
+				85CB69D4238529BF003384F8 /* Calendar */,
+				85CB69E8238529BF003384F8 /* GCDTimer */,
+				85CB69EB238529BF003384F8 /* MCalendarFramework.h */,
+			);
+			path = MCalendarFramework;
+			sourceTree = "<group>";
+		};
+		85CB69D4238529BF003384F8 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				85CB69D5238529BF003384F8 /* MCalendarCollectionCell.m */,
+				85CB69D6238529BF003384F8 /* Helper.h */,
+				85CB69D7238529BF003384F8 /* MCalendarItem.h */,
+				85CB69D8238529BF003384F8 /* MCalendarView.h */,
+				85CB69D9238529BF003384F8 /* MCalendarTitleView.h */,
+				85CB69DA238529BF003384F8 /* MCalendarShortView.h */,
+				85CB69DB238529BF003384F8 /* MImageTitleButton.m */,
+				85CB69DC238529BF003384F8 /* NSDate+Calendar.h */,
+				85CB69DD238529BF003384F8 /* CalendarConfig.m */,
+				85CB69DE238529BF003384F8 /* MCalendarItem.m */,
+				85CB69DF238529BF003384F8 /* Helper.m */,
+				85CB69E0238529BF003384F8 /* MCalendarCollectionCell.h */,
+				85CB69E1238529BF003384F8 /* MCalendarTitleView.m */,
+				85CB69E2238529BF003384F8 /* MCalendarView.m */,
+				85CB69E3238529BF003384F8 /* NSDate+Calendar.m */,
+				85CB69E4238529BF003384F8 /* MImageTitleButton.h */,
+				85CB69E5238529BF003384F8 /* MCalendarShortView.m */,
+				85CB69E6238529BF003384F8 /* Calendar.bundle */,
+				85CB69E7238529BF003384F8 /* CalendarConfig.h */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		85CB69E8238529BF003384F8 /* GCDTimer */ = {
+			isa = PBXGroup;
+			children = (
+				85CB69E9238529BF003384F8 /* JX_GCDTimerManager.h */,
+				85CB69EA238529BF003384F8 /* JX_GCDTimerManager.m */,
+			);
+			path = GCDTimer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,11 +390,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EBC9A151FEA4E3B00692C0C /* XCDropdownSegment.bundle in Resources */,
 				1E2A498F20621F5E0042E2AA /* Main.storyboard in Resources */,
+				85CB69F5238529BF003384F8 /* Calendar.bundle in Resources */,
 				1E25AA411FE254BB0047E765 /* LaunchScreen.storyboard in Resources */,
-				1EBC9A091FEA071000692C0C /* XCDropdownSegmentCell.xib in Resources */,
 				1E25AA3E1FE254BB0047E765 /* Assets.xcassets in Resources */,
+				85CB69C02385288F003384F8 /* XCDropdownSegment.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,15 +419,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EBC9A0F1FEA0B3F00692C0C /* XCDropdownSegmentBar.m in Sources */,
-				1E25AA691FE2623C0047E765 /* XCDropdownSegment.m in Sources */,
+				85CB69C32385288F003384F8 /* XCDropdownSegmentButton.m in Sources */,
 				1EBC9A1D1FEB675A00692C0C /* ViewController.m in Sources */,
-				1EBC9A0C1FEA0AF200692C0C /* XCDropdownSegmentConfigure.m in Sources */,
-				1EBC9A121FEA0E5F00692C0C /* UIView+XCDropdownSegment.m in Sources */,
+				85CB69F6238529BF003384F8 /* JX_GCDTimerManager.m in Sources */,
+				85CB69CF238528B3003384F8 /* XHThreeChildView.m in Sources */,
+				85CB69BE2385288F003384F8 /* UIView+XCDropdownSegment.m in Sources */,
+				85CB69C12385288F003384F8 /* XCDropdownSegment.m in Sources */,
+				85CB69D22385290D003384F8 /* XCDropdownSegmentCell.m in Sources */,
+				85CB69F3238529BF003384F8 /* NSDate+Calendar.m in Sources */,
+				85CB69EF238529BF003384F8 /* MCalendarItem.m in Sources */,
+				85CB69F4238529BF003384F8 /* MCalendarShortView.m in Sources */,
+				85CB69CE238528B3003384F8 /* XHTwoChildView.m in Sources */,
+				85CB69CC238528B3003384F8 /* XHOneChildView.m in Sources */,
+				85CB69F0238529BF003384F8 /* Helper.m in Sources */,
 				1EBC9A1E1FEB675A00692C0C /* XCTestViewController.m in Sources */,
-				1EBC9A081FEA071000692C0C /* XCDropdownSegmentCell.m in Sources */,
+				85CB69BF2385288F003384F8 /* XCDropdownSegmentConfigure.m in Sources */,
+				85CB69F2238529BF003384F8 /* MCalendarView.m in Sources */,
+				85CB69CD238528B3003384F8 /* XHFourChildView.m in Sources */,
+				85CB69C22385288F003384F8 /* XCDropdownSegmentBar.m in Sources */,
+				85CB69ED238529BF003384F8 /* MImageTitleButton.m in Sources */,
+				85CB69F1238529BF003384F8 /* MCalendarTitleView.m in Sources */,
+				85CB69EE238529BF003384F8 /* CalendarConfig.m in Sources */,
+				85CB69F923853618003384F8 /* UIColor+Hex.m in Sources */,
 				1E25AA441FE254BB0047E765 /* main.m in Sources */,
 				1E25AA361FE254BA0047E765 /* AppDelegate.m in Sources */,
+				85CB69EC238529BF003384F8 /* MCalendarCollectionCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

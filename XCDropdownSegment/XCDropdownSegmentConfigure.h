@@ -10,6 +10,8 @@
 
 @interface XCDropdownSegmentConfigure : NSObject
 
+/** 缩小高度 默认 50 👀 */
+@property (assign, nonatomic) CGFloat segmentHeight;
 /** 👀 段头高：默认 50 👀 */
 @property (assign, nonatomic) CGFloat sectionHeight;
 /** 👀 行高：默认 50 👀 */

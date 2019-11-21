@@ -11,9 +11,11 @@
 @interface XCDropdownSegmentCell : UITableViewCell
 
 /** 👀 标题LB 👀 */
-@property (weak, nonatomic) IBOutlet UILabel *titleLB;
+@property (nonatomic,strong)  UILabel *titleLB;
 /** 👀 选中图片 👀 */
-@property (weak, nonatomic) IBOutlet UIImageView *checkImgView;
+@property (nonatomic,strong)  UIImageView *checkImgView;
+
+
 
 
 + (instancetype)cellWithTableView:(UITableView *)tableView;
