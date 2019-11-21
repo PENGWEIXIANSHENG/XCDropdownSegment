@@ -58,11 +58,13 @@
         confi.headerSelectedTitleColor = [UIColor colorWithHexString:@"#4180E9"];
     }];
     
+    //视图代理
     self.segment.oneView.delegate = self;
     self.segment.twoView.delegate = self;
     self.segment.threeView.delegate = self;
     self.segment.fourView.delegate = self;
     
+    //视图数据的传递
     [self.segment.oneView updateDataArr:self.dataArr];
     [self.segment.twoView updateDataArr:self.dataArr];
     [self.segment.threeView updateDataArr:self.dataArr];
@@ -97,6 +99,7 @@
     
 }
 
+
 - (void)dropdownSegment:(XHOneChildView *)dropdownSegment
 didSelectRow:(NSInteger)row
    inSection:(NSInteger)section category_id:(NSString *)miceTypeEnum category_cn_name:(NSString *)categoryName{
@@ -127,7 +130,6 @@ didSelectRow:(NSInteger)row
                miceTime:(NSString *)miceTime{
     
     NSLog(@"XHFourChildView ==  %@",miceTime);
-    
     
     [self.segment updateSelectedItemTitle:miceTime];
     [self.segment close];

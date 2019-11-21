@@ -16,8 +16,6 @@
 
 /** 👀 蒙板 👀 */
 @property (strong, nonatomic) UIButton *mask;
-/** 👀 表格视图 👀 */
-//@property (strong, nonatomic) UITableView *tableView;
 /** 👀 头部视图 👀 */
 @property (strong, nonatomic) XCDropdownSegmentBar *segmentBar;
 
@@ -83,10 +81,8 @@
     self.segmentBar.frame = self.bounds;
     self.segmentBar.height = self.configure.sectionHeight;
     
-    /// 设置 tableView 的 frame
-//    self.tableView.left  = 0;
-//    self.tableView.top   = self.segmentBar.height;
-//    self.tableView.width = self.width;
+    /// 设置 View 的 frame
+
     
     
     self.oneView.left = 0;
@@ -117,14 +113,13 @@
      *  superView
         self
         maskView
-        tableView
+        View
         segmentBar
      */
     
     /// 添加背景蒙板
     [self addSubview:self.mask];
-    /// 添加 tableView
-//    [self addSubview:self.tableView];
+    /// 添加
     [self addSubview:self.oneView];
     [self addSubview:self.twoView];
     [self addSubview:self.threeView];
@@ -149,21 +144,6 @@
     
     return _mask;
 }
-
-//- (UITableView *)tableView
-//{
-//    if (!_tableView)
-//    {
-//        /// 添加 tableView
-//        UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
-//        tableView.delegate   = self;
-//        tableView.dataSource = self;
-//        tableView.tableFooterView = [UIView new];
-//        _tableView = tableView;
-//    }
-//
-//    return _tableView;
-//}
 
 - (XHOneChildView *)oneView
 {
@@ -212,10 +192,6 @@
     {
         XCDropdownSegmentBar *segmentBar = [[XCDropdownSegmentBar alloc] initWithFrame:CGRectZero];
         segmentBar.backgroundColor = [UIColor whiteColor];
-//        segmentBar.layer.shadowOpacity = .2f;
-//        segmentBar.layer.shadowOffset = CGSizeMake(3, 3);
-//        segmentBar.layer.shadowRadius = 3;
-        
         segmentBar.layer.borderWidth = 0.5;
         segmentBar.layer.borderColor = [UIColor grayColor].CGColor;
         
@@ -257,7 +233,7 @@
     /// 更新当前显示的段
     _currentSection = index;
     
-    if (item.isSelected) {  /// 显示 tableView
+    if (item.isSelected) {
         // 显示
         [self open];
         if (index == 1) {
@@ -266,16 +242,8 @@
         if (index == 3) {
             [self.fourView updateSubView];
         }
-        
-        
-        
-        // 重新刷新 tableView
-//        [self.tableView reloadData];
-//        // 选中与标题文字相同的行
-//        [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:[self fetchCurrentSelectedRow] inSection:0]
-//                                    animated:NO
-//                              scrollPosition:UITableViewScrollPositionNone];
-    } else {    /// 隐藏 tableView
+
+    } else {    /// 隐藏
         [self close];
     }
 
@@ -289,45 +257,6 @@
 #pragma mark - 🔒 👀 Privite Method 👀
 
 /**
- *  获取 当前分段的 tableView 的最大高度
- */
-//- (CGFloat)fetchTableViewMaxHeight
-//{
-//    /// 当前显示的 tableView 总行数
-//    NSInteger count = [self.dataSource dropdownSegment:self titlesInSection:_currentSection].count;
-//
-//    /// 当前显示的 高度
-//    CGFloat maxH = count * self.configure.rowHeight;
-//
-//    /// 允许显示的最大高度
-//    CGFloat limitMaxH = self.height - self.configure.sectionHeight;
-//
-//    return MIN(maxH, limitMaxH);
-//}
-
-/**
- *  获取当前选中的行数
- */
-//- (NSInteger)fetchCurrentSelectedRow
-//{
-//    NSArray *titles = [self.dataSource dropdownSegment:self titlesInSection:_currentSection];
-//
-//    NSString *currentTitle  = self.segmentBar.selectedItem.currentTitle;
-//
-//    __block NSInteger index = 0;
-//    [titles enumerateObjectsUsingBlock:^(NSString * _Nonnull title, NSUInteger idx, BOOL * _Nonnull stop) {
-//
-//        if ([title isEqualToString:currentTitle])
-//        {
-//            index = idx;
-//            *stop = YES;
-//        }
-//    }];
-//
-//    return index;
-//}
-
-/**
  *  显示
  */
 - (void)open
@@ -335,11 +264,10 @@
     [self.twoView removeSuperview];
     [self.fourView close];
     self.height = SCREEN_HEIGHT;
-    /// 显示 mask、tableView
+    /// 显示
     [UIView animateWithDuration:ANIMATION_DURATION animations:^{
         
         self.mask.alpha = 1.f;
-//        self.tableView.height = [self fetchTableViewMaxHeight];
         self.oneView.height = 0;
         self.twoView.height = 0;
         self.threeView.height = 0;
@@ -386,8 +314,6 @@
     self.segmentBar.configure = self.configure;
     self.segmentBar.titles = [self.dataSource titlesOfHeaderInDropdownSegment:self];
     /// 更新 tableView 的配置
-//    self.tableView.rowHeight = self.configure.rowHeight;
-//    [self.tableView reloadData];
 }
 
 /**
@@ -401,18 +327,10 @@
 
     // 取消 item 的选中状态
     self.segmentBar.selectedItem.selected = NO;
-    // 更新 item 的标题
-//    NSInteger index = self.tableView.indexPathForSelectedRow.row;
-//    NSArray *titles = [self.dataSource dropdownSegment:self titlesInSection:_currentSection];
-//    if (titles.count > index) {
-//        [self.segmentBar.selectedItem setTitle:titles[index] forState:UIControlStateNormal];
-//    }
-    
-    // 关闭 tableView
+    // 关闭
     [UIView animateWithDuration:ANIMATION_DURATION animations:^{
         
         self.mask.alpha = 0.f;
-//        self.tableView.height = 0;
         self.oneView.height = 0;
         self.twoView.height = 0;
         self.threeView.height = 0;
@@ -420,44 +338,6 @@
         self.height = self.configure.segmentHeight;
     }];
 }
-
-#pragma mark - 📕 👀 UITableViewDataSource 👀
-
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-//{
-//    NSArray *titles = [self.dataSource dropdownSegment:self titlesInSection:_currentSection];
-//    return titles.count;
-//}
-//
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    XCDropdownSegmentCell *cell = [XCDropdownSegmentCell cellWithTableView:tableView];
-//
-//    cell.checkImgView.image = self.configure.checkImage;
-//
-//    NSArray *titles = [self.dataSource dropdownSegment:self titlesInSection:_currentSection];
-//
-//    if (titles.count > indexPath.row)
-//    {
-//        cell.titleLB.text = titles[indexPath.row];
-//    }
-//
-//    return cell;
-//}
-//
-//#pragma mark - 💉 👀 UITableViewDelegate 👀
-//
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    /// 关闭 tableView
-//    [self close];
-//
-//    /// 点击 tableView 中的某一行的回调
-//    if (self.delegate && [self.delegate respondsToSelector:@selector(dropdownSegment:didSelectRow:inSection:)])
-//    {
-//        [self.delegate dropdownSegment:self didSelectRow:indexPath.row inSection:_currentSection];
-//    }
-//}
 
 
 -(void)updateSelectedItemTitle:(NSString *)title{
