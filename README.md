@@ -27,17 +27,40 @@
 #### 创建视图
 
 ```objc
-XCDropdownSegment *segment = [[XCDropdownSegment alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT-64)];
-segment.dataSource = self;
-segment.delegate   = self;
-[self.view addSubview:segment];
-    
-if (1 == self.sectionCount)
+/**
+ *  设置 UI
+ */
+- (void)setupUI
 {
+    XCDropdownSegment *segment = [[XCDropdownSegment alloc] initWithFrame:CGRectMake(0,80, SCREEN_WIDTH, 40)];
+    segment.dataSource = self;
+    segment.delegate   = self;
+    self.segment = segment;
+    [self.view addSubview:segment];
+    
     [segment updateConfigure:^(XCDropdownSegmentConfigure *confi) {
-        confi.headerSelectedTitleColor = [UIColor redColor];
         confi.rowHeight = 40;
+        confi.segmentHeight = 40;
+        confi.sectionHeight = 40;
+        //根据项目需求更改图片
+        confi.arrowUpImage   = ImageNamed(@"icon_arrow_up");
+        confi.arrowDownImage = ImageNamed(@"icon_arrow_down");
+        confi.headerTitleColor = [UIColor colorWithHexString:@"#333333"];
+        confi.headerSelectedTitleColor = [UIColor colorWithHexString:@"#4180E9"];
     }];
+    
+    //视图代理
+    self.segment.oneView.delegate = self;
+    self.segment.twoView.delegate = self;
+    self.segment.threeView.delegate = self;
+    self.segment.fourView.delegate = self;
+    
+    //视图数据的传递
+    [self.segment.oneView updateDataArr:self.dataArr];
+    [self.segment.twoView updateDataArr:self.dataArr];
+    [self.segment.threeView updateDataArr:self.dataArr];
+
+    
 }
 ```
 
@@ -52,27 +75,10 @@ if (1 == self.sectionCount)
 ```objc
 - (NSArray<NSString *> *)titlesOfHeaderInDropdownSegment:(XCDropdownSegment *)dropdownSegment
 {
-	return @[@"第一段", @"第二段", @"第三段"];
+	return @[@"类型",@"行业", @"区域", @"日期"];
 }
 ```
 </br>
-
-`- (NSArray<NSString *> *)dropdownSegment:(XCDropdownSegment *)dropdownSegment titlesInSection:(NSInteger)section`
-
-每段显示的文字数组，可以根据不同的 `section` 来返回不同的内容
-
-```objc
-- (NSArray<NSString *> *)dropdownSegment:(XCDropdownSegment *)dropdownSegment titlesInSection:(NSInteger)section
-{
-    return @[
-             @"三：001",
-             @"三：002",
-             @"三：003",
-             @"三：004",
-             @"三：005"
-             ];
-}
-```
 </br>
 
 #### `<XCDropdownSegmentDelegate.h>`&nbsp;代理方法
