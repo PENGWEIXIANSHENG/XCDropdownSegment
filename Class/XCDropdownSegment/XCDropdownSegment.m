@@ -12,7 +12,7 @@
 
 
 
-@interface XCDropdownSegment ()<UITableViewDataSource, UITableViewDelegate>
+@interface XCDropdownSegment ()
 
 /** 👀 蒙板 👀 */
 @property (strong, nonatomic) UIButton *mask;
@@ -169,7 +169,6 @@
 {
     if (!_oneView)
     {
-        /// 添加 tableView
         XHOneChildView *tableView = [[XHOneChildView alloc] initWithFrame:CGRectZero];
         _oneView = tableView;
     }
@@ -180,7 +179,6 @@
 {
     if (!_twoView)
     {
-        /// 添加 tableView
         XHTwoChildView *tableView = [[XHTwoChildView alloc] initWithFrame:CGRectZero];
         _twoView = tableView;
     }
@@ -191,7 +189,6 @@
 {
     if (!_threeView)
     {
-        /// 添加 tableView
         XHThreeChildView *tableView = [[XHThreeChildView alloc] initWithFrame:CGRectZero];
         _threeView = tableView;
     }
@@ -202,7 +199,6 @@
 {
     if (!_fourView)
     {
-        /// 添加 tableView
         XHFourChildView *tableView = [[XHFourChildView alloc] initWithFrame:CGRectZero];
         _fourView = tableView;
     }
@@ -295,41 +291,41 @@
 /**
  *  获取 当前分段的 tableView 的最大高度
  */
-- (CGFloat)fetchTableViewMaxHeight
-{
-    /// 当前显示的 tableView 总行数
-    NSInteger count = [self.dataSource dropdownSegment:self titlesInSection:_currentSection].count;
-    
-    /// 当前显示的 高度
-    CGFloat maxH = count * self.configure.rowHeight;
-
-    /// 允许显示的最大高度
-    CGFloat limitMaxH = self.height - self.configure.sectionHeight;
-    
-    return MIN(maxH, limitMaxH);
-}
+//- (CGFloat)fetchTableViewMaxHeight
+//{
+//    /// 当前显示的 tableView 总行数
+//    NSInteger count = [self.dataSource dropdownSegment:self titlesInSection:_currentSection].count;
+//
+//    /// 当前显示的 高度
+//    CGFloat maxH = count * self.configure.rowHeight;
+//
+//    /// 允许显示的最大高度
+//    CGFloat limitMaxH = self.height - self.configure.sectionHeight;
+//
+//    return MIN(maxH, limitMaxH);
+//}
 
 /**
  *  获取当前选中的行数
  */
-- (NSInteger)fetchCurrentSelectedRow
-{
-    NSArray *titles = [self.dataSource dropdownSegment:self titlesInSection:_currentSection];
-
-    NSString *currentTitle  = self.segmentBar.selectedItem.currentTitle;
-    
-    __block NSInteger index = 0;
-    [titles enumerateObjectsUsingBlock:^(NSString * _Nonnull title, NSUInteger idx, BOOL * _Nonnull stop) {
-        
-        if ([title isEqualToString:currentTitle])
-        {
-            index = idx;
-            *stop = YES;
-        }
-    }];
-    
-    return index;
-}
+//- (NSInteger)fetchCurrentSelectedRow
+//{
+//    NSArray *titles = [self.dataSource dropdownSegment:self titlesInSection:_currentSection];
+//
+//    NSString *currentTitle  = self.segmentBar.selectedItem.currentTitle;
+//
+//    __block NSInteger index = 0;
+//    [titles enumerateObjectsUsingBlock:^(NSString * _Nonnull title, NSUInteger idx, BOOL * _Nonnull stop) {
+//
+//        if ([title isEqualToString:currentTitle])
+//        {
+//            index = idx;
+//            *stop = YES;
+//        }
+//    }];
+//
+//    return index;
+//}
 
 /**
  *  显示
@@ -427,41 +423,41 @@
 
 #pragma mark - 📕 👀 UITableViewDataSource 👀
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    NSArray *titles = [self.dataSource dropdownSegment:self titlesInSection:_currentSection];
-    return titles.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    XCDropdownSegmentCell *cell = [XCDropdownSegmentCell cellWithTableView:tableView];
-    
-    cell.checkImgView.image = self.configure.checkImage;
-    
-    NSArray *titles = [self.dataSource dropdownSegment:self titlesInSection:_currentSection];
-    
-    if (titles.count > indexPath.row)
-    {
-        cell.titleLB.text = titles[indexPath.row];
-    }
-    
-    return cell;
-}
-
-#pragma mark - 💉 👀 UITableViewDelegate 👀
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    /// 关闭 tableView
-    [self close];
-    
-    /// 点击 tableView 中的某一行的回调
-    if (self.delegate && [self.delegate respondsToSelector:@selector(dropdownSegment:didSelectRow:inSection:)])
-    {
-        [self.delegate dropdownSegment:self didSelectRow:indexPath.row inSection:_currentSection];
-    }
-}
+//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+//{
+//    NSArray *titles = [self.dataSource dropdownSegment:self titlesInSection:_currentSection];
+//    return titles.count;
+//}
+//
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    XCDropdownSegmentCell *cell = [XCDropdownSegmentCell cellWithTableView:tableView];
+//
+//    cell.checkImgView.image = self.configure.checkImage;
+//
+//    NSArray *titles = [self.dataSource dropdownSegment:self titlesInSection:_currentSection];
+//
+//    if (titles.count > indexPath.row)
+//    {
+//        cell.titleLB.text = titles[indexPath.row];
+//    }
+//
+//    return cell;
+//}
+//
+//#pragma mark - 💉 👀 UITableViewDelegate 👀
+//
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    /// 关闭 tableView
+//    [self close];
+//
+//    /// 点击 tableView 中的某一行的回调
+//    if (self.delegate && [self.delegate respondsToSelector:@selector(dropdownSegment:didSelectRow:inSection:)])
+//    {
+//        [self.delegate dropdownSegment:self didSelectRow:indexPath.row inSection:_currentSection];
+//    }
+//}
 
 
 -(void)updateSelectedItemTitle:(NSString *)title{

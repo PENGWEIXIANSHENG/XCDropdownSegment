@@ -17,11 +17,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @protocol XHOneChildViewDelegate<NSObject>
 @optional
-/**
- *  点击头部的回调
- */
-- (void)dropdownSegment:(XHOneChildView *)dropdownSegment
-    didSelectHeaderInSection:(NSInteger)section;
 
 /**
  *  点击某一行的回调

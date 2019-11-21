@@ -16,6 +16,10 @@
 		1E2A498F20621F5E0042E2AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E2A498E20621F5E0042E2AA /* Main.storyboard */; };
 		1EBC9A1D1FEB675A00692C0C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EBC9A1A1FEB675A00692C0C /* ViewController.m */; };
 		1EBC9A1E1FEB675A00692C0C /* XCTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EBC9A1C1FEB675A00692C0C /* XCTestViewController.m */; };
+		8597B608238641CA005B083A /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8597B604238641CA005B083A /* MBProgressHUD.m */; };
+		8597B609238641CA005B083A /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 8597B605238641CA005B083A /* LICENSE */; };
+		8597B60A238641CA005B083A /* README.mdown in Resources */ = {isa = PBXBuildFile; fileRef = 8597B607238641CA005B083A /* README.mdown */; };
+		8597B60E238641EA005B083A /* XHProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8597B60C238641EA005B083A /* XHProgressHUD.m */; };
 		85CB69BE2385288F003384F8 /* UIView+XCDropdownSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CB69B22385288D003384F8 /* UIView+XCDropdownSegment.m */; };
 		85CB69BF2385288F003384F8 /* XCDropdownSegmentConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CB69B92385288E003384F8 /* XCDropdownSegmentConfigure.m */; };
 		85CB69C02385288F003384F8 /* XCDropdownSegment.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 85CB69BA2385288E003384F8 /* XCDropdownSegment.bundle */; };
@@ -77,6 +81,12 @@
 		1EBC9A1A1FEB675A00692C0C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1EBC9A1B1FEB675A00692C0C /* XCTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCTestViewController.h; sourceTree = "<group>"; };
 		1EBC9A1C1FEB675A00692C0C /* XCTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCTestViewController.m; sourceTree = "<group>"; };
+		8597B604238641CA005B083A /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		8597B605238641CA005B083A /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		8597B606238641CA005B083A /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		8597B607238641CA005B083A /* README.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.mdown; sourceTree = "<group>"; };
+		8597B60C238641EA005B083A /* XHProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHProgressHUD.m; sourceTree = "<group>"; };
+		8597B60D238641EA005B083A /* XHProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHProgressHUD.h; sourceTree = "<group>"; };
 		85CB69B22385288D003384F8 /* UIView+XCDropdownSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XCDropdownSegment.m"; sourceTree = "<group>"; };
 		85CB69B32385288D003384F8 /* XCDropdownSegmentConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCDropdownSegmentConfigure.h; sourceTree = "<group>"; };
 		85CB69B42385288D003384F8 /* XCDropdownSegmentBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCDropdownSegmentBar.h; sourceTree = "<group>"; };
@@ -153,8 +163,7 @@
 		1E25AA281FE254BA0047E765 = {
 			isa = PBXGroup;
 			children = (
-				85CB69D3238529BF003384F8 /* MCalendarFramework */,
-				1E25AA661FE255B60047E765 /* XCDropdownSegment */,
+				8597B602238641A5005B083A /* Class */,
 				1E25AA331FE254BA0047E765 /* XCDropdownSegmentExample */,
 				1E25AA4C1FE254BB0047E765 /* XCDropdownSegmentExampleTests */,
 				1E25AA571FE254BB0047E765 /* XCDropdownSegmentExampleUITests */,
@@ -237,6 +246,37 @@
 				85CB69B52385288D003384F8 /* XCDropdownSegmentHeader.h */,
 			);
 			path = XCDropdownSegment;
+			sourceTree = "<group>";
+		};
+		8597B602238641A5005B083A /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				8597B60B238641EA005B083A /* XHProgressHUD */,
+				8597B603238641CA005B083A /* MBProgressHUD */,
+				85CB69D3238529BF003384F8 /* MCalendarFramework */,
+				1E25AA661FE255B60047E765 /* XCDropdownSegment */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		8597B603238641CA005B083A /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				8597B604238641CA005B083A /* MBProgressHUD.m */,
+				8597B605238641CA005B083A /* LICENSE */,
+				8597B606238641CA005B083A /* MBProgressHUD.h */,
+				8597B607238641CA005B083A /* README.mdown */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		8597B60B238641EA005B083A /* XHProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				8597B60C238641EA005B083A /* XHProgressHUD.m */,
+				8597B60D238641EA005B083A /* XHProgressHUD.h */,
+			);
+			path = XHProgressHUD;
 			sourceTree = "<group>";
 		};
 		85CB69D3238529BF003384F8 /* MCalendarFramework */ = {
@@ -390,7 +430,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8597B609238641CA005B083A /* LICENSE in Resources */,
 				1E2A498F20621F5E0042E2AA /* Main.storyboard in Resources */,
+				8597B60A238641CA005B083A /* README.mdown in Resources */,
 				85CB69F5238529BF003384F8 /* Calendar.bundle in Resources */,
 				1E25AA411FE254BB0047E765 /* LaunchScreen.storyboard in Resources */,
 				1E25AA3E1FE254BB0047E765 /* Assets.xcassets in Resources */,
@@ -428,6 +470,7 @@
 				85CB69D22385290D003384F8 /* XCDropdownSegmentCell.m in Sources */,
 				85CB69F3238529BF003384F8 /* NSDate+Calendar.m in Sources */,
 				85CB69EF238529BF003384F8 /* MCalendarItem.m in Sources */,
+				8597B608238641CA005B083A /* MBProgressHUD.m in Sources */,
 				85CB69F4238529BF003384F8 /* MCalendarShortView.m in Sources */,
 				85CB69CE238528B3003384F8 /* XHTwoChildView.m in Sources */,
 				85CB69CC238528B3003384F8 /* XHOneChildView.m in Sources */,
@@ -441,6 +484,7 @@
 				85CB69F1238529BF003384F8 /* MCalendarTitleView.m in Sources */,
 				85CB69EE238529BF003384F8 /* CalendarConfig.m in Sources */,
 				85CB69F923853618003384F8 /* UIColor+Hex.m in Sources */,
+				8597B60E238641EA005B083A /* XHProgressHUD.m in Sources */,
 				1E25AA441FE254BB0047E765 /* main.m in Sources */,
 				1E25AA361FE254BA0047E765 /* AppDelegate.m in Sources */,
 				85CB69EC238529BF003384F8 /* MCalendarCollectionCell.m in Sources */,

@@ -9,6 +9,7 @@
 #import "XHOneChildView.h"
 #import "UIView+XCDropdownSegment.h"
 #import "XCDropdownSegmentCell.h"
+#import "UIColor+Hex.h"
 //#import "XHActivityModel.h"
 
 @interface XHOneChildView ()<UITableViewDataSource, UITableViewDelegate>
@@ -25,7 +26,6 @@
 -(instancetype) initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
         
-//        self.backgroundColor = [UIColor redColor];
         
         self.dataArr = [NSMutableArray array];
         [self addSubview:self.tableView];
@@ -54,29 +54,17 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     XCDropdownSegmentCell *cell = [XCDropdownSegmentCell cellWithTableView:tableView];
+
     
-//    XHActivityModel *model = [self.dataArr safeObjectAtIndex:indexPath.row];
-    
-//    cell.checkImgView.image = self.configure.checkImage;
-    
-//    NSArray *titles = [self.dataSource dropdownSegment:self titlesInSection:_currentSection];
-//
-////    if (titles.count > indexPath.row)
-////    {
-//        cell.titleLB.text = model.category_cn_name;
-//
-//    if (indexPath.row == self.selectedRow) {
-////           self.arrowImgV.hidden = YES;
-//           cell.titleLB.textColor = [UIColor colorWithHexString:@"#4180E9"];
-//       }else{
-////           self.arrowImgV.hidden = YES;
-//           cell.titleLB.textColor = [UIColor colorWithHexString:@"#333333"];
-//       }
-    
-    
-    
-    
-//    }
+    NSString *title = self.dataArr[indexPath.row];
+
+        cell.titleLB.text = title;
+
+    if (indexPath.row == self.selectedRow) {
+           cell.titleLB.textColor = [UIColor colorWithHexString:@"#4180E9"];
+       }else{
+           cell.titleLB.textColor = [UIColor colorWithHexString:@"#333333"];
+       }
     
     return cell;
 }
@@ -89,12 +77,12 @@
     self.selectedRow = indexPath.row;
     [self.tableView reloadData];
 
-//     XHActivityModel *model = [self.dataArr safeObjectAtIndex:indexPath.row];
+     NSString *category_cn_name = [self.dataArr objectAtIndex:indexPath.row];
 //
     /// 点击 tableView 中的某一行的回调
     if (self.delegate && [self.delegate respondsToSelector:@selector(dropdownSegment:didSelectRow:inSection: category_id:category_cn_name:)])
     {
-//        [self.delegate dropdownSegment:self didSelectRow:indexPath.row inSection:indexPath.section category_id:model.category_id category_cn_name:model.category_cn_name];
+        [self.delegate dropdownSegment:self didSelectRow:indexPath.row inSection:indexPath.section category_id:category_cn_name category_cn_name:category_cn_name];
     }
 }
 

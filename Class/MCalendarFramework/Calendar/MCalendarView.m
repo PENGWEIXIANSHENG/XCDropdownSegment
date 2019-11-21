@@ -10,7 +10,7 @@
 #import "MCalendarCollectionCell.h"
 #import "MCalendarItem.h"
 #import "UIColor+Hex.h"
-
+#import "XHProgressHUD.h"
 @interface MCalendarView ()<UICollectionViewDelegate, UICollectionViewDataSource>
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) UIView  *headerView;
@@ -245,7 +245,7 @@
     NSLog(@" result == %d",result);
     
     if (result == -1) {
-//        [XHProgressHUD showTextHud:@"选择的时间不能晚于今天"];
+        [XHProgressHUD showTextHud:@"选择的时间不能晚于今天"];
 
         return;
     }

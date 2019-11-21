@@ -32,6 +32,7 @@
     if (self = [super initWithFrame:frame]) {
         
 //        self.backgroundColor = [UIColor blueColor];
+        
         [CalendarConfig sharedInstance].textColor = [UIColor colorWithHexString:@"#333333"];
         [CalendarConfig sharedInstance].selectTextColor = [UIColor colorWithHexString:@"#333333"];
         [CalendarConfig sharedInstance].backgroundColor = [UIColor whiteColor];

@@ -19,6 +19,8 @@
 
 @property (nonatomic,strong) XCDropdownSegment *segment;
 
+@property (nonatomic,strong) NSMutableArray *dataArr;
+
 
 
 @end
@@ -39,7 +41,7 @@
  */
 - (void)setupUI
 {
-    XCDropdownSegment *segment = [[XCDropdownSegment alloc] initWithFrame:CGRectMake(0,40+10, SCREEN_WIDTH, 40)];
+    XCDropdownSegment *segment = [[XCDropdownSegment alloc] initWithFrame:CGRectMake(0,80, SCREEN_WIDTH, 40)];
     segment.dataSource = self;
     segment.delegate   = self;
     self.segment = segment;
@@ -59,6 +61,12 @@
     self.segment.twoView.delegate = self;
     self.segment.threeView.delegate = self;
     self.segment.fourView.delegate = self;
+    
+    [self.segment.oneView updateDataArr:self.dataArr];
+    [self.segment.twoView updateDataArr:self.dataArr];
+    [self.segment.threeView updateDataArr:self.dataArr];
+
+    
 }
 
 #pragma mark - 📕 👀 XCDropdownSegmentDataSource 👀
@@ -70,33 +78,12 @@
     }
     
     if (3 == self.sectionCount) {
-        return @[@"第一段", @"第二段", @"第三段"];
+        return @[@"类型",@"行业", @"区域", @"日期"];
     }
     
     return @[@"第一段"];
 }
 
-- (NSArray<NSString *> *)dropdownSegment:(XCDropdownSegment *)dropdownSegment titlesInSection:(NSInteger)section
-{
-    if (0 == section)   return @[@"一：001", @"一：002", @"一：003"];
-    
-    if (1 == section)   return @[
-                                 @"二：001",
-                                 @"二：002",
-                                 @"二：003",
-                                 @"二：004",
-                                 @"二：005",
-                                 @"二：006",
-                                 @"二：007"
-                                 ];
-    return @[
-             @"三：001",
-             @"三：002",
-             @"三：003",
-             @"三：004",
-             @"三：005"
-             ];
-}
 
 #pragma mark - 💉 👀 XCDropdownSegmentDelegate 👀
 
@@ -105,12 +92,67 @@
     NSLog(@"点击了第 %zi 段", section);
     
     
+    
+    
 }
 
-- (void)dropdownSegment:(XCDropdownSegment *)dropdownSegment didSelectRow:(NSInteger)row inSection:(NSInteger)section
-{
-    NSLog(@"点击了第 %zi 段的第 %zi 行", section, row);
+- (void)dropdownSegment:(XHOneChildView *)dropdownSegment
+didSelectRow:(NSInteger)row
+   inSection:(NSInteger)section category_id:(NSString *)miceTypeEnum category_cn_name:(NSString *)categoryName{
+    NSLog(@"XHOneChildView ==  %@",categoryName);
+
+    [self.segment updateSelectedItemTitle:categoryName];
+       [self.segment close];
+}
+
+- (void)dropdownSegment:(XHTwoChildView *)dropdownSegment
+            category_id:(NSString *)miceCategoryId category_cn_name:(NSString *)categoryName{
     
+    NSLog(@"XHTwoChildView ==  %@",categoryName);
+
+    [self.segment updateSelectedItemTitle:categoryName];
+       [self.segment close];
+}
+
+
+- (void)dropdownSegment:(XHThreeChildView *)dropdownSegment
+           divisionName:(NSString *)divisionName venueName:(NSString *)venueName venueId:(NSString *)venueId{
+    NSLog(@"XHThreeChildView ==  %@",venueName);
+    [self.segment updateSelectedItemTitle:venueName];
+    [self.segment close];
+}
+
+- (void)dropdownSegment:(XHFourChildView *)dropdownSegment
+               miceTime:(NSString *)miceTime{
+    
+    NSLog(@"XHFourChildView ==  %@",miceTime);
+    
+    
+    [self.segment updateSelectedItemTitle:miceTime];
+    [self.segment close];
+}
+
+
+
+
+
+-(NSMutableArray *)dataArr{
+    
+    if (!_dataArr) {
+        _dataArr = [NSMutableArray arrayWithArray:@[
+                                         @"二：001",
+                                         @"二：002",
+                                         @"二：003",
+                                         @"二：004",
+                                         @"二：005",
+                                         @"二：006",
+                                         @"二：007",
+                                         @"二：007",
+                                         @"二：007",
+                                         @"二：007"
+        ]];
+    }
+    return _dataArr;
     
 }
 

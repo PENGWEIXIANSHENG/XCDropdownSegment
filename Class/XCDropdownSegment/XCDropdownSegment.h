@@ -37,8 +37,8 @@
 /**
  *  每段显示的文字数组
  */
-- (NSArray<NSString *> *)dropdownSegment:(XCDropdownSegment *)dropdownSegment
-                         titlesInSection:(NSInteger)section;
+//- (NSArray<NSString *> *)dropdownSegment:(XCDropdownSegment *)dropdownSegment
+//                         titlesInSection:(NSInteger)section;
 
 @end
 
@@ -54,12 +54,12 @@
 - (void)dropdownSegment:(XCDropdownSegment *)dropdownSegment
     didSelectHeaderInSection:(NSInteger)section;
 
-/**
- *  点击某一行的回调
- */
-- (void)dropdownSegment:(XCDropdownSegment *)dropdownSegment
-           didSelectRow:(NSInteger)row
-              inSection:(NSInteger)section;
+///**
+// *  点击某一行的回调
+// */
+//- (void)dropdownSegment:(XCDropdownSegment *)dropdownSegment
+//           didSelectRow:(NSInteger)row
+//              inSection:(NSInteger)section;
 @end
 
 

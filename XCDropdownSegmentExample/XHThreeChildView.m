@@ -8,6 +8,10 @@
 
 #import "XHThreeChildView.h"
 #import "XCDropdownSegmentCell.h"
+#import "UIView+XCDropdownSegment.h"
+#import "XCDropdownSegmentHeader.h"
+#import "UIColor+Hex.h"
+
 //#import "XHActivityModel.h"
 
 @interface XHThreeChildView ()<UITableViewDelegate,UITableViewDataSource>
@@ -21,7 +25,6 @@
 @property (nonatomic,copy) NSString *venueName;
 @property (nonatomic,strong) NSMutableArray *leftDataArr;
 @property (nonatomic,strong) NSMutableArray *rightDataArr;
-//@property (nonatomic,strong) NSMutableArray *allDataArr;
 @end
 
 @implementation XHThreeChildView
@@ -29,7 +32,6 @@
 -(instancetype) initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
         
-//        self.backgroundColor = [UIColor yellowColor];
         
         self.leftDataArr = [NSMutableArray array];
         self.rightDataArr = [NSMutableArray array];
@@ -37,7 +39,6 @@
         self.venueId = @"";
         self.venueName = @"";
 
-//        self.allDataArr = [NSMutableArray array];
         [self addSubview:self.leftTableView];
         [self addSubview:self.rightTableView];
         
@@ -50,16 +51,10 @@
     [super layoutSubviews];
     
     
-//    CGRectMake(0, 0, kScreenWidth/2 - 15, 0)
-//    [self.leftTableView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.bottom.left.mas_equalTo(0);
-//        make.width.mas_equalTo(kScreenWidth/3);
-//    }];
-//
-//    [self.rightTableView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.mas_equalTo(self.leftTableView.mas_right);
-//        make.top.bottom.right.mas_equalTo(0);
-//    }];
+    self.leftTableView.frame = CGRectMake(0, 0, SCREEN_WIDTH/3, self.height);
+    
+    self.rightTableView.frame = CGRectMake(SCREEN_WIDTH/3, 0, SCREEN_WIDTH - SCREEN_WIDTH/3, self.height);
+    
     
 }
 
@@ -77,24 +72,26 @@
     XCDropdownSegmentCell *cell = [XCDropdownSegmentCell cellWithTableView:tableView];
     
     
-//    if (tableView == self.leftTableView) {
-//        XHActivityModel *model = [self.leftDataArr safeObjectAtIndex:indexPath.row];
-//        cell.titleLB.text = model.divisionName;
-//        if (indexPath.row == self.leftSeleIndex) {
-//               cell.titleLB.textColor = [UIColor colorWithHexString:@"#4180E9"];
-//           }else{
-//               cell.titleLB.textColor = [UIColor colorWithHexString:@"#333333"];
-//           }
-//    }else if (tableView == self.rightTableView){
-//
-//        XHActivityModel *model = [self.rightDataArr safeObjectAtIndex:indexPath.row];
-//        cell.titleLB.text = model.venueName;
-//        if (indexPath.row == self.rightSeleIndex) {
-//               cell.titleLB.textColor = [UIColor colorWithHexString:@"#4180E9"];
-//           }else{
-//               cell.titleLB.textColor = [UIColor colorWithHexString:@"#333333"];
-//           }
-//    }
+    if (tableView == self.leftTableView) {
+
+        NSString *divisionName = self.leftDataArr[indexPath.row];
+        cell.titleLB.text = divisionName;
+        if (indexPath.row == self.leftSeleIndex) {
+               cell.titleLB.textColor = [UIColor colorWithHexString:@"#4180E9"];
+           }else{
+               cell.titleLB.textColor = [UIColor colorWithHexString:@"#333333"];
+           }
+    }else if (tableView == self.rightTableView){
+
+        NSString *venueName = self.rightDataArr[indexPath.row];
+
+        cell.titleLB.text = venueName;
+        if (indexPath.row == self.rightSeleIndex) {
+               cell.titleLB.textColor = [UIColor colorWithHexString:@"#4180E9"];
+           }else{
+               cell.titleLB.textColor = [UIColor colorWithHexString:@"#333333"];
+           }
+    }
     
     return cell;
 }
@@ -104,55 +101,39 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-//    if (tableView == self.leftTableView) {
-//
-//        [self.rightDataArr removeAllObjects];
-//
-//        self.leftSeleIndex = indexPath.row;
-//        self.rightSeleIndex = 0;
-//
-//        XHActivityModel *model = [self.leftDataArr safeObjectAtIndex:indexPath.row];
-//        self.divisionName = model.divisionName;
-//
-//        XHActivityModel *divisionModel = [[XHActivityModel alloc]init];
-//        divisionModel.venueName = @"全部";
-//        divisionModel.venueId = @"";
-//        [self.rightDataArr addObject:divisionModel];
-//
-//        if ([model.divisionName isEqualToString:@"全部"]) {
-//            for (XHActivityModel *model in self.leftDataArr) {
-//                [self updateRightTableViewDataArr:model];
-//            }
-//        }else{
-//            [self updateRightTableViewDataArr:model];
-//        }
-//
-//        self.venueId = @"";
-//        self.venueName = @"";
-//
-//        [self.leftTableView reloadData];
-//        [self.rightTableView reloadData];
-//
-//    }else if (tableView == self.rightTableView){
-//        self.rightSeleIndex = indexPath.row;
-//        XHActivityModel *model = [self.rightDataArr safeObjectAtIndex:indexPath.row];
-//
-//        QMUILog(@"",@"didSelectRowAtIndexPath ==  model.venueName ==%@",model.venueName);
-//        QMUILog(@"",@"didSelectRowAtIndexPath ==  model.venueId == %@",model.venueId);
-//
-//        if (!ValidStr(self.divisionName)) {
-//            self.divisionName = @"全部";
-//        }
-//
-//        self.venueId = model.venueId;
-//        self.venueName = model.venueName;
-//        [self.rightTableView reloadData];
-//
-//        if (self.delegate && [self.delegate respondsToSelector:@selector(dropdownSegment:divisionName:venueName:venueId:)])
-//          {
-//              [self.delegate dropdownSegment:self divisionName:self.divisionName venueName:self.venueName venueId:self.venueId];
-//          }
-//    }
+    if (tableView == self.leftTableView) {
+
+        [self.rightDataArr removeAllObjects];
+
+        self.leftSeleIndex = indexPath.row;
+        self.rightSeleIndex = 0;
+
+        NSString *divisionName = [self.leftDataArr objectAtIndex:indexPath.row];
+        self.divisionName = divisionName;
+
+        [self updateRightTableViewDataArr];
+
+        self.venueId = @"";
+        self.venueName = @"";
+
+        [self.leftTableView reloadData];
+        [self.rightTableView reloadData];
+
+    }else if (tableView == self.rightTableView){
+        
+        self.rightSeleIndex = indexPath.row;
+     
+        NSString *divisionName = [self.rightDataArr objectAtIndex:indexPath.row];
+        
+        self.venueName = divisionName;
+        
+        [self.rightTableView reloadData];
+
+        if (self.delegate && [self.delegate respondsToSelector:@selector(dropdownSegment:divisionName:venueName:venueId:)])
+          {
+              [self.delegate dropdownSegment:self divisionName:self.divisionName venueName:self.venueName venueId:self.venueId];
+          }
+    }
     
 }
 
@@ -160,35 +141,21 @@
     NSLog(@"dataArr ===  %@",dataArr);
     self.leftSeleIndex = 0;
     self.rightSeleIndex = 0;
+    
     [self.rightDataArr removeAllObjects];
     [self.leftDataArr removeAllObjects];
-//    [self.allDataArr removeAllObjects];
-    
-//    XHActivityModel *divisionModel = [[XHActivityModel alloc]init];
-//    divisionModel.venueName = @"全部";
-//    divisionModel.venueId = @"";
-//    [self.rightDataArr addObject:divisionModel];
-//    
-//    for (XHActivityModel *model in dataArr) {
-//        [self updateRightTableViewDataArr:model];
-//    }
-
+    [self updateRightTableViewDataArr];
     self.leftDataArr = dataArr;
-//    self.allDataArr = self.rightDataArr;
-    
     [self.leftTableView reloadData];
     [self.rightTableView reloadData];
 }
 
 
-//- (void)updateRightTableViewDataArr:(XHActivityModel *)model{
-//
-//    for (NSDictionary *item in model.miceVenueList) {
-//        XHActivityModel *miceVenueModel = [XHActivityModel modelWithDictionary:item];
-//        [self.rightDataArr addObject:miceVenueModel];
-//    }
-//
-//}
+- (void)updateRightTableViewDataArr{
+
+    self.rightDataArr = [NSMutableArray arrayWithArray:@[@"haha",@"heheh",@"heiheihei"]];
+
+}
 
 
 -(UITableView *)leftTableView{
