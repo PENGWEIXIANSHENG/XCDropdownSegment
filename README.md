@@ -24,6 +24,19 @@
 
 ### 代码
 
+
+```objc
+
+@interface XCTestViewController ()<XCDropdownSegmentDataSource, XCDropdownSegmentDelegate,XHOneChildViewDelegate,XHTwoChildViewDelegate,XHThreeChildViewDelegate,XHFourChildViewDelegate>
+@property (nonatomic,strong) XCDropdownSegment *segment;
+@property (nonatomic,strong) NSMutableArray *dataArr;
+@end
+```
+
+</br>
+
+
+
 #### 创建视图
 
 ```objc
@@ -88,17 +101,86 @@
 
 点击第 section 段的头部的回调
 
+```objc
+#pragma mark - 💉 👀 XCDropdownSegmentDelegate 👀
+- (void)dropdownSegment:(XCDropdownSegment *)dropdownSegment didSelectHeaderInSection:(NSInteger)section
+{
+
+    NSLog(@"点击了第 %zi 段", section);
+ 
+}
+
+```
+
+
 </br>
 
-`- (void)dropdownSegment:(XCDropdownSegment *)dropdownSegment didSelectRow:(NSInteger)row inSection:(NSInteger)section`
-
-点击第 section 段的第 row 行的回调
-
-
-
-## Installation
-
-### CocoaPods
+视图代理
 ```objc
-pod 'XCDropdownSegment'
+- (void)dropdownSegment:(XHOneChildView *)dropdownSegment
+didSelectRow:(NSInteger)row
+   inSection:(NSInteger)section category_id:(NSString *)miceTypeEnum category_cn_name:(NSString *)categoryName{
+  
+    NSLog(@"XHOneChildView ==  %@",categoryName);
+
+    [self.segment updateSelectedItemTitle:categoryName];
+    [self.segment close];
+}
+
+- (void)dropdownSegment:(XHTwoChildView *)dropdownSegment
+            category_id:(NSString *)miceCategoryId category_cn_name:(NSString *)categoryName{
+    
+    NSLog(@"XHTwoChildView ==  %@",categoryName);
+
+    [self.segment updateSelectedItemTitle:categoryName];
+    
+    [self.segment close];
+}
+
+
+- (void)dropdownSegment:(XHThreeChildView *)dropdownSegment
+           divisionName:(NSString *)divisionName venueName:(NSString *)venueName venueId:(NSString *)venueId{
+    NSLog(@"XHThreeChildView ==  %@",venueName);
+    [self.segment updateSelectedItemTitle:venueName];
+    [self.segment close];
+}
+
+- (void)dropdownSegment:(XHFourChildView *)dropdownSegment
+               miceTime:(NSString *)miceTime{
+    
+    NSLog(@"XHFourChildView ==  %@",miceTime);
+    
+    [self.segment updateSelectedItemTitle:miceTime];
+    [self.segment close];
+}
+
 ```
+
+</br>
+
+设置数据源，可以根据服务器返回的数据进行设置
+
+```objc
+
+-(NSMutableArray *)dataArr{
+    
+    if (!_dataArr) {
+        _dataArr = [NSMutableArray arrayWithArray:@[
+                                         @"二：001",
+                                         @"二：002",
+                                         @"二：003",
+                                         @"二：004",
+                                         @"二：005",
+                                         @"二：006",
+                                         @"二：007",
+                                         @"二：007",
+                                         @"二：007",
+                                         @"二：007"
+        ]];
+    }
+    return _dataArr;
+    
+}
+```
+</br>
+
